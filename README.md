@@ -15,7 +15,7 @@ Demo an application use ReactJs with some components and functions
 ### Demo
 
 ### Source
-[https://github.com/duycs/demo-react](https://github.com/duycs/demo-react)
+[https://github.com/duycs/demo-reactjs](https://github.com/duycs/demo-reactjs)
 
 ### Run
 ```
