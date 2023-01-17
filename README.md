@@ -1,35 +1,21 @@
-# Demo ReactJs
+## PROJECT
 
-### Criteria
-Demo an application use ReactJs with some components and functions
-- Authentication
-- Common components
-- Servies
-- Routing
-- A page complex and mixing all component
-- The page have some action behavior
+### Authentication
+1. Basic authenticate login
+1. User authorization with Roles Admin/Operator
 
-### Concepts
-- [ReactJs Docs](https://reactjs.org/docs/getting-started.html)
+### Pages Function
+1. Login
+2. Management with Tabs
+3. Logs with Tabs
+4. Setting with Tabs
+5. Help
 
-### Demo
+### Environment
+- NodeJs
 
-### Source
-[https://github.com/duycs/demo-reactjs](https://github.com/duycs/demo-reactjs)
+### Run Dev
+- ```npm install```
+- ```npm start```
 
-### Run
-```
-npm start
-```
-
-### TODO
-- Common components
-- Servies
-- Routing
-- A page complex and mixing all component
-- The page have some action behavior
-
-### References
-- [ReactJS Docs](https://angular.io/docs)
-- https://jasonwatmore.com/post/2017/12/07/react-redux-jwt-authentication-tutorial-example
-- 
+### Deployment
