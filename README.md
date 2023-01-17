@@ -20,3 +20,4 @@
 - ```npm start```
 
 ### Deployment
+- Login with account ```admin\12345678```, ```operator\12345678```
