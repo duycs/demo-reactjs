@@ -6,9 +6,9 @@
 
 ### Pages Function
 1. Login
-2. Management with Tabs
-3. Logs with Tabs
-4. Setting with Tabs
+2. Management with Tabs function
+3. Setting with Tabs function
+4. Logs with Tabs function
 5. Help
 
 ### Environment

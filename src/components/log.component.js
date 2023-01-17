@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-
 import UserService from "../services/user.service";
 import EventBus from "../common/EventBus";
 
-export default class BoardAdmin extends Component {
+export default class Log extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +12,7 @@ export default class BoardAdmin extends Component {
   }
 
   componentDidMount() {
-    UserService.getAdminBoard().then(
+    UserService.getLog().then(
       response => {
         this.setState({
           content: response.data

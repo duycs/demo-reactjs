@@ -11,11 +11,13 @@ import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardOperator from "./components/board-operator.component";
-import BoardAdmin from "./components/board-admin.component";
+import BoardManagement from "./components/board-management.component";
 
 // import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
 import Setting from "./components/setting.component";
+import Log from "./components/log.component";
+import Help from "./components/help.component";
 
 class App extends Component {
   constructor(props) {
@@ -26,6 +28,7 @@ class App extends Component {
       showUserBoard: false,
       showAdminBoard: false,
       showSetting: false,
+      showLog: false,
       currentUser: undefined,
     };
   }
@@ -38,7 +41,8 @@ class App extends Component {
         currentUser: user,
         showUserBoard: user.roles.includes("ROLE_OPERATOR"),
         showAdminBoard: user.roles.includes("ROLE_ADMIN"),
-        showSetting: user.roles.includes("ROLE_ADMIN") || user.roles.includes("ROLE_OPERATOR")
+        showSetting: user.roles.includes("ROLE_ADMIN") || user.roles.includes("ROLE_OPERATOR"),
+        showLog: user.roles.includes("ROLE_ADMIN") || user.roles.includes("ROLE_OPERATOR")
       });
     }
     
@@ -57,12 +61,13 @@ class App extends Component {
       showUserBoard: false,
       showAdminBoard: false,
       showSetting: false,
+      showLog: false,
       currentUser: undefined,
     });
   }
 
   render() {
-    const { currentUser, showUserBoard, showAdminBoard, showSetting } = this.state;
+    const { currentUser, showUserBoard, showAdminBoard, showLog, showSetting } = this.state;
 
     return (
       <div>
@@ -87,8 +92,16 @@ class App extends Component {
 
             {showAdminBoard && (
               <li className="nav-item">
-                <Link to={"/admin"} className="nav-link">
+                <Link to={"/management"} className="nav-link">
                   Management
+                </Link>
+              </li>
+            )}
+
+            {showLog && (
+              <li className="nav-item">
+                <Link to={"/logs"} className="nav-link">
+                  Logs
                 </Link>
               </li>
             )}
@@ -101,13 +114,19 @@ class App extends Component {
               </li>
             )}
 
-            {currentUser && (
+            {/* {currentUser && (
               <li className="nav-item">
                 <Link to={"/user"} className="nav-link">
                   User
                 </Link>
               </li>
-            )}
+            )} */}
+
+            <li className="nav-item">
+                <Link to={"/help"} className="nav-link">
+                  Help
+                </Link>
+              </li>
           </div>
 
           {currentUser ? (
@@ -149,8 +168,10 @@ class App extends Component {
             <Route path="/profile" element={<Profile />} />
             <Route path="/user" element={<BoardUser />} />
             <Route path="/operator" element={<BoardOperator />} />
-            <Route path="/admin" element={<BoardAdmin />} />
+            <Route path="/management" element={<BoardManagement />} />
             <Route path="/setting" element={<Setting />} />
+            <Route path="/logs" element={<Log/>} />
+            <Route path="/help" element={<Help />} />
           </Routes>
         </div>
 

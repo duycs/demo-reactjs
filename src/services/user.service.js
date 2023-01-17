@@ -23,6 +23,10 @@ class UserService {
   getSetting() {
     return axios.get(API_URL + 'setting', { headers: authHeader() });
   }
+
+  getLog() {
+    return axios.get(API_URL + 'log', { headers: authHeader() });
+  }
 }
 
 export default new UserService();
