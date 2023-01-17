@@ -1,4 +1,4 @@
-## PROJECT
+## PROJECT APP
 
 ### Authentication
 1. Basic authenticate login
@@ -13,6 +13,7 @@
 
 ### Environment
 - NodeJs
+- [Auth and resource API: https://github.com/duycs/demo-nodejs](https://github.com/duycs/demo-nodejs)
 
 ### Run Dev
 - ```npm install```
