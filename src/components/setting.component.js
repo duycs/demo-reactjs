@@ -15,7 +15,7 @@ export default class Setting extends Component {
     UserService.getSetting().then(
       response => {
         this.setState({
-          content: response.data
+          content: JSON.stringify(response.data)
         });
       },
       error => {

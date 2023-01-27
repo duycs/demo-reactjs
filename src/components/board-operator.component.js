@@ -16,7 +16,7 @@ export default class BoardOperator extends Component {
     UserService.getOperatorBoard().then(
       response => {
         this.setState({
-          content: response.data
+          content:  JSON.stringify(response.data)
         });
       },
       error => {

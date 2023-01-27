@@ -76,19 +76,19 @@ class App extends Component {
             PROJECT-NAME
           </Link>
           <div className="navbar-nav mr-auto">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to={"/home"} className="nav-link">
                 Home
               </Link>
-            </li>
+            </li> */}
 
-            {showUserBoard && (
+            {/* {showUserBoard && (
               <li className="nav-item">
                 <Link to={"/operator"} className="nav-link">
                   Operator Board
                 </Link>
               </li>
-            )}
+            )} */}
 
             {showAdminBoard && (
               <li className="nav-item">
@@ -162,12 +162,12 @@ class App extends Component {
         <div className="container mt-3">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
+            {/* <Route path="/home" element={<Home />} /> */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/user" element={<BoardUser />} />
-            <Route path="/operator" element={<BoardOperator />} />
+            {/* <Route path="/operator" element={<BoardOperator />} /> */}
             <Route path="/management" element={<BoardManagement />} />
             <Route path="/setting" element={<Setting />} />
             <Route path="/logs" element={<Log/>} />
