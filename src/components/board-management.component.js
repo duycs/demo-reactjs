@@ -2,13 +2,14 @@ import React, { Component } from "react";
 
 import UserService from "../services/user.service";
 import EventBus from "../common/EventBus";
+import Tabs from "./tabs.component";
 
 export default class BoardManagement extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      content: ""
+      content: {}
     };
   }
 
@@ -16,7 +17,7 @@ export default class BoardManagement extends Component {
     UserService.getAdminBoard().then(
       response => {
         this.setState({
-          content:  JSON.stringify(response.data)
+          content: response.data
         });
       },
       error => {
@@ -39,9 +40,35 @@ export default class BoardManagement extends Component {
   render() {
     return (
       <div className="container">
-        <header className="jumbotron">
-          <h3>{this.state.content}</h3>
-        </header>
+        <h1>Management</h1>
+        <Tabs>
+          <div label="Test 1">
+            <span>{this.state.content.description}</span>
+            <h5>Logs</h5>
+            <span>Real time logs go here</span>
+            {/* TODO
+            {this.state.content.logs.forEach(element => {
+              <span>{element}</span>
+            })
+            } */}
+            <span></span>
+          </div>
+          <div label="Test 2">
+            <span>{this.state.content.description}</span>
+            <h5>Logs</h5>
+            <span>Real time logs go here</span>
+          </div>
+          <div label="Test 3">
+            <span>{this.state.content.description}</span>
+            <h5>Logs</h5>
+            <span>Real time logs go here</span>
+          </div>
+          <div label="Test 4">
+            <span>{this.state.content.description}</span>
+            <h5>Logs</h5>
+            <span>Real time logs go here</span>
+          </div>
+        </Tabs>
       </div>
     );
   }
